@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import HelloWorld from './components/HelloWorld/HelloWorld'
 
 class App extends Component {
 
   render = () => {
 
     return (
-      <div> Hello World </div>
+      <HelloWorld/>
     );
   }
 }
