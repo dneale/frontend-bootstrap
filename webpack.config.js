@@ -1,23 +1,30 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: __dirname + '/dist',
     filename: 'index.js',
   },
   module: {
-      loaders: [
-          {
-              test: /\.(js)$/,
-              loader: 'babel-loader',
-              query: {
-                  presets: ['es2015', 'stage-0', 'react']
-              }
-          }
-      ]
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ['es2015', 'stage-0', 'react']
+        }
+      }
+    ]
   }, resolve: {
-      extensions: ['.js']
+      extensions: ['.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
