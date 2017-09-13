@@ -11,6 +11,6 @@ test('Hello world should display hello world', () => {
     const hw = mount(
         <HelloWorld />
     );
-
+    
     expect(hw.text()).toEqual('Hello World')
 });
