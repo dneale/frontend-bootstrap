@@ -4,7 +4,8 @@
     "test:inband": "jest --coverage --runInBand",
     "test:watch": "jest --coverage --watch",
     "serve:watch": "webpack-dev-server --content-base dist/ --hot --inline --host 0.0.0.0",
-    "build": "webpack"
+    "webpack": "webpack",
+    "build": "npm test && npm run webpack"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

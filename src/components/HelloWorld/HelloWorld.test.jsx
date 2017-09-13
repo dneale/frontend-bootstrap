@@ -3,7 +3,7 @@ import {shallow, mount} from 'enzyme';
 import HelloWorld from './HelloWorld';
 
 test('HelloWorld renders correctly', () => {
-  const component = shallow(<HelloWorld/>);
+  const component = mount(<HelloWorld/>);
   expect(component.find('div')).toHaveLength(1);
 });
 
