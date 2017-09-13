@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "test": "jest",
-    "test:inband": "jest --runInBand",
-    "test:watch": "jest --watch",
+    "test": "jest --coverage",
+    "test:inband": "jest --coverage --runInBand",
+    "test:watch": "jest --coverage --watch",
     "serve:watch": "webpack-dev-server --content-base dist/ --hot --inline --host 0.0.0.0",
     "build": "webpack"
   },
