@@ -3,7 +3,7 @@
     "test": "jest --coverage",
     "test:inband": "jest --coverage --runInBand",
     "test:watch": "jest --coverage --watch",
-    "serve:watch": "webpack-dev-server --content-base dist/ --hot --inline --host 0.0.0.0",
+    "start": "webpack-dev-server --content-base dist/ --hot --inline --host 0.0.0.0",
     "webpack": "webpack",
     "build": "npm test && npm run webpack",
     "json-server": "json-server server/index.js"
@@ -34,9 +34,13 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "styled-components": "^2.1.2"
   }
 }

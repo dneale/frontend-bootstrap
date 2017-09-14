@@ -1,8 +1,12 @@
 import React from 'react';
-import HelloWorld from './components/HelloWorld/HelloWorld';
+import Filter from './containers/Filter';
+import ProductList from './containers/ProductList';
 
 const App = () => (
-  <HelloWorld />
+  <div>
+    <Filter />
+    <ProductList />
+  </div>
 );
 
 export default App;

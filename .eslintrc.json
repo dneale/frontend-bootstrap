@@ -15,5 +15,7 @@
     },
     "extends": [
         "airbnb"
-    ]
+    ],
+    "rules": {
+    }
 }
