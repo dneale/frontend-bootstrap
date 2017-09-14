@@ -5,14 +5,29 @@ import _ from 'lodash';
 
 const renderProducts = productList => (
   _.map(productList, product => (
-    <li key={product.id}> {product.name} </li>
+    <tr key={product.id}>
+      <td>{product.name}</td>
+      <td>{product.stock}</td>
+      <td>{product.department}</td>
+    </tr>
   ))
 );
 
 const ProductList = props => (
-  <ul>
-    { renderProducts(props.products) }
-  </ul>
+  <div className="container">
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Stock Level</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        { renderProducts(props.products) }
+      </tbody>
+    </table>
+  </div>
 );
 
 function mapStateToProps({ products }) {
@@ -22,7 +37,7 @@ function mapStateToProps({ products }) {
 ProductList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape(
     {
-      id: PropTypes.string,
+      id: PropTypes.number,
       name: PropTypes.string,
     }),
   ),

@@ -6,7 +6,7 @@ module.exports = () => {
 
   faker.seed(123);
 
-  for (let i = 0; i < 10000; i++) {
+  for (let i = 0; i < 100000; i++) {
     data.products.push({
       id: i,
       name: `${faker.commerce.productName()}`,
