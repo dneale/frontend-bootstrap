@@ -6,7 +6,9 @@ import _ from 'lodash';
 const renderProducts = productList => (
   _.map(productList, product => (
     <tr key={product.id}>
-      <td>{product.name}</td>
+      <td>
+        <a href={`/products/${product.id}`}>{product.name}</a>
+      </td>
       <td>{product.stock}</td>
       <td>{product.department}</td>
     </tr>
