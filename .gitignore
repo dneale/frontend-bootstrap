@@ -60,3 +60,4 @@ typings/
 dist/
 jest_*/*
 .idea
+**/.ipynb_checkpoints
