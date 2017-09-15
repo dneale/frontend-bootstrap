@@ -10,4 +10,6 @@ Jupyter is a notebook-paradigm based UI for data analytics, incorporating code, 
 
 `%> runJupyter.sh`
 
-Then copy the link (containing the login token from the console output), and open it in the browser
+2. Then copy the link (containing the login token from the console output), and open it in the browser
+
+3. Jupyter the thing!
